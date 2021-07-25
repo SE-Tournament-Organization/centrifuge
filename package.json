@@ -1,0 +1,19 @@
+{
+  "name": "seto.centrifuge",
+  "version": "0.1.0",
+  "description": "Node.js all in one app for SETO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sector-s-Edge-Tournament-Organization/centrifuge.git"
+  },
+  "author": "R2D2Vader",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sector-s-Edge-Tournament-Organization/centrifuge/issues"
+  },
+  "homepage": "https://github.com/Sector-s-Edge-Tournament-Organization/centrifuge#readme"
+}
