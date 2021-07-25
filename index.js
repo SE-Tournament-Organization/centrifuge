@@ -2,3 +2,4 @@
 
 // Run the bot
 const bot = require("./bot/botmain.js");
+bot.run("se!");
