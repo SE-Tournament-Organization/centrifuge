@@ -18,8 +18,7 @@ module.exports = {
 // constants setup, some are set from the index file.
 const fs = require('fs');
 client.commands = new Discord.Collection();
-
-var prefix = "";
+let prefix = "";
 
 const commandFiles = fs.readdirSync('./bot/commands').filter(file => file.endsWith('.js'));
 
