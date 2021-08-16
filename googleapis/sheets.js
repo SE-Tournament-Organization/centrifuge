@@ -37,7 +37,7 @@ getUserData = function (username) {
                 rows.map((row) => {
                     data.push(row[0]);
                 });
-                let row = data.findIndex((element) => element == username);
+                let row = data.findIndex((element) => element.toLowerCase() == username.toLowerCase());
                 if (row == -1) { reject("Couldn't find that user"); return; }
                 row = row + 2;
 
