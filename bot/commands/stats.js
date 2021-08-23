@@ -13,7 +13,7 @@ module.exports = {
             .then(row => {
                 const embed = new Discord.MessageEmbed()
                     .setColor('#005eff')
-                    .setTitle('Player Stats: ' + row[0])
+                    .setTitle('Player Stats: ' + row[0] + " [Rank " + row[7] + "]")
                     .setDescription('This message shows their overall stats across all SETO tournaments they have played in.')
                     .setFooter('SETO Bot')
                     .addFields({ name: "Points", value: row[1], inline: true },
