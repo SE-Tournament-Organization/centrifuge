@@ -19,13 +19,12 @@ module.exports = {
                     .addFields({ name: "Points", value: row[1], inline: true },
                         { name: "Match Wins", value: row[2], inline: true },
                         { name: "Match Losses", value: row[3], inline: true },
-                        { name: "Placements", value: "***", inline: false },
+                        { name: "Placements", value: "---", inline: false },
                         { name: "Gold", value: row[4], inline: true },
                         { name: "Silver", value: row[5], inline: true },
                         { name: "Bronze", value: row[6], inline: true }
                     );
-                message.channel.send(embed);
-
+                message.channel.send({embeds: [embed]});
             })
             .catch(err => { 
                 console.log(err);

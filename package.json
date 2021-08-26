@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/Sector-s-Edge-Tournament-Organization/centrifuge#readme",
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.1.0",
     "googleapis": "^84.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=0.16.6"
+  },
+  "engineStrict": true
 }

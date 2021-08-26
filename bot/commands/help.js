@@ -24,7 +24,7 @@ module.exports = {
                 // console.log("`" + prefix + names[i] + useages[i] + "` " + descriptions[i]);
                 embed.addField("`" + prefix + names[i] + useages[i] + "`", descriptions[i]);
             }
-            message.channel.send(embed);
+            message.channel.send({embeds: [embed]});
 
         }
 
@@ -43,7 +43,7 @@ module.exports = {
                     { name: "Description", value: command.description })
                 .setFooter('SETO Bot');
             
-            message.channel.send(embed);
+            message.channel.send({embeds: [embed]});
         }
     },
 };

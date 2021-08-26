@@ -74,7 +74,7 @@ module.exports.authenticate = function () {
         if (err) return console.log('Error loading client secret file:', err);
         // Authorize a client with credentials
         authorize(JSON.parse(content), function (oAuth2Client) {
-            console.log("Now connected to the Google Sheets API");
+            console.log("Now authenticated with the Google Sheets API");
             connected = true;
             auth = oAuth2Client;
         });

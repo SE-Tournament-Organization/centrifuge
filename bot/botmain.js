@@ -1,8 +1,8 @@
 // Main bot file
 
 // init discord.js
-const Discord = require("discord.js");
-const client = new Discord.Client();
+const { Client, Intents, Collection } = require("discord.js");
+const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES]});
 const token = process.env.TOKEN || require("../local_env.json").TOKEN;
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
 
 // constants setup, some are set from the index file.
 const fs = require('fs');
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 let prefix = "";
 
 const commandFiles = fs.readdirSync('./bot/commands').filter(file => file.endsWith('.js'));
@@ -30,11 +30,11 @@ for (const file of commandFiles) {
 // handle ready event
 client.on("ready", () => {
     console.log("Bot connected to Discord");
-    client.user.setActivity(prefix + "help");
+    client.user.setActivity("the SE Comp Scene | " + prefix + "help", { type: 'COMPETING' });
 });
 
 // separate file command handler
-client.on("message", message => {
+client.on("messageCreate", message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
