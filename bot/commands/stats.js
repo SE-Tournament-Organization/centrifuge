@@ -9,7 +9,7 @@ module.exports = {
         if (args.length == 0) {
             return message.reply("Which Mercenary's stats would you like to see? I can't read your mind, you know.");
         }
-        sheets.getUserData(args[0])
+        sheets.getUserData(args.join(" "))
             .then(row => {
                 const embed = new Discord.MessageEmbed()
                     .setColor('#005eff')

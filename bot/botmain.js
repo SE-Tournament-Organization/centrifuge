@@ -3,7 +3,7 @@
 // init discord.js
 const { Client, Intents, Collection } = require("discord.js");
 const client = new Client({intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES], partials: ["CHANNEL"]});
-const token = process.env.TOKEN || require("../local_env.json").TOKEN;
+const token = process.env.TOKEN;
 
 module.exports = {
     run: (newPrefix) => {
