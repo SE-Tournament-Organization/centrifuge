@@ -7,7 +7,7 @@ bot.run("se!");
 
 // Connect to Google Sheets API
 const sheets = require("./googleapis/sheets.js");
-sheets.authenticate();
+
 
 
 
