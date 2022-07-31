@@ -10,7 +10,7 @@ getUserData = function (username) {
         let data = [];
         const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLEAUTH });
         sheets.spreadsheets.values.get({
-            spreadsheetId: '1yE73Wqw59SIylmiyFA1l2LmHxcTptnFVbNCL84991ww',
+            spreadsheetId: process.env.SHEETID,
             range: 'players!A2:A',
         }, (err, res) => {
             // console.log("Received Sheets API first response");
@@ -26,7 +26,7 @@ getUserData = function (username) {
                 row = row + 2;
                 const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLEAUTH });
                 sheets.spreadsheets.values.get({
-                    spreadsheetId: '1yE73Wqw59SIylmiyFA1l2LmHxcTptnFVbNCL84991ww',
+                    spreadsheetId: process.env.SHEETID,
                     range: 'players!A' + row + ':G' + row,
                 }, (err, res) => {
                     // console.log("Received Sheets API Second response")
@@ -55,7 +55,7 @@ getTeamData = function (teamname) {
         let data = [];
         const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLEAUTH });
         sheets.spreadsheets.values.get({
-            spreadsheetId: '1yE73Wqw59SIylmiyFA1l2LmHxcTptnFVbNCL84991ww',
+            spreadsheetId: process.env.SHEETID,
             range: 'teams!A2:A',
         }, (err, res) => {
             // console.log("Received Sheets API first response");
@@ -71,7 +71,7 @@ getTeamData = function (teamname) {
                 row = row + 2;
                 const sheets = google.sheets({ version: 'v4', auth: process.env.GOOGLEAUTH });
                 sheets.spreadsheets.values.get({
-                    spreadsheetId: '1yE73Wqw59SIylmiyFA1l2LmHxcTptnFVbNCL84991ww',
+                    spreadsheetId: process.env.SHEETID,
                     range: 'teams!A' + row + ':G' + row,
                 }, (err, res) => {
                     // console.log("Received Sheets API Second response")
